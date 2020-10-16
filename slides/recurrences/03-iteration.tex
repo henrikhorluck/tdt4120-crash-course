@@ -1,0 +1,9 @@
+\begin{frame}{Iterasjonsmetoden}
+    \begin{block}{Eksempeloppgave}
+        La oss finne kjøretiden til funksjonen i forrige slide!
+        \input{slides/recurrences/mystic-algorithm}
+        Vi setter opp en rekurrensrelasjon: $T(n) = T(n-1) + 1$\\
+        Hvor mange ganger må vi kalle \texttt{Mystisk} før vi når grunntilfellet $T(1) = 1$?
+        \onslide<2->{Løsning: Vi reduserer $n$ med 1 hver gang, så vi må løse $n- k\cdot 1 = 1 \to k = n-1$.\footnote<2->{Hvorvidt vi utfører $n$ eller $n-1$ arbeid spiller sjelden en rolle} Så vi gjennomfører det konstante arbeidet $n$ ganger. Til sammen: $T(n) = n$, som er $\Theta(n)$}
+    \end{block}
+\end{frame} 

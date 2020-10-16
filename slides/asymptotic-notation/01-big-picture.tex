@@ -1,0 +1,11 @@
+\begin{frame}{Kort fortalt}
+    \begin{block}{Viktig å få med seg}
+		\begin{enumerate}
+			\item<1->  Vi ser på forskjeller i en kosmisk skala, når $n$ blir \emph{veldig} stor. Detaljer er ikke viktig, vi har en konstant $c$ som kan styres.
+			\item<2-> O-ene betegner \emph{klasser} med funksjoner. Disse kan ha ulike tolkninger. F.eks. kan $\Omega(n^2)$ tolkes som $n^2$, $n!$ eller $n^3 + \pi$.
+			\item<3-> Notasjonsmisbruk: $f(n) = O(g(n))$ betyr \emph{egentlig} $f(n) \in O(g(n))$, altså at $f(n)$ er en tolkning av klassen. Dette er \emph{ikke} symmetrisk\footnote<3->{Unntatt for $\Theta$}, så vi kan ikke nødvendigvis skrive $g(n) = O(f(n))$.\\
+			Tenk selv: hva om $f(n) = n^2$ og $g(n) = n^3$?
+			\item<4-> Selv om det er flere ledd, så er det kun den som vokser raskest som teller. Eksempel: $O(3+4n+n^4 + n! + \log^{10}{n}) \equiv O(n!)$
+		\end{enumerate}
+	\end{block}
+\end{frame}

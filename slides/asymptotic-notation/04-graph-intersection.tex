@@ -1,0 +1,22 @@
+\begin{frame}{}
+\begin{tikzpicture}
+\begin{axis}[Big O]
+\addplot [
+    domain=0:100, 
+    samples=100, 
+    color=red,
+]
+{x^2 -10*x + 45};
+\addlegendentry{$g(n) = n^2 -10n + 45$}
+\addplot [
+    domain=0:100, 
+    samples=100, 
+    color=blue,
+    ]
+    {50*x};
+\addlegendentry{$f(n) = 50n$}
+\addplot [smooth, very thick] coordinates {(59.24, 0) (59.24, 3000)};
+
+\end{axis}
+\end{tikzpicture}
+\end{frame}

@@ -1,0 +1,23 @@
+\begin{frame}{}
+	    \begin{tikzpicture}
+\begin{axis}[Big O]
+%Below the red parabola is defined
+\addplot [
+    domain=0:10, 
+    samples=100, 
+    color=red,
+]
+{x^2 -10*x + 45};
+\addlegendentry{$g(n) = n^2 -10n + 45$}
+%Here the blue parabloa is defined
+\addplot [
+    domain=0:10, 
+    samples=100, 
+    color=blue,
+    ]
+    {50*x};
+\addlegendentry{$f(n) = 50n$}
+
+\end{axis}
+\end{tikzpicture}
+	\end{frame}

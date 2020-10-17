@@ -1,7 +1,12 @@
 \begin{frame}{Rekursjonstrær}
     \begin{block}{Iterasjonsmetoden med flere grener}
-        Vi har fått et rekurrens $T(n) = 2T(n/2)+n$\\
-        Jeg gjetter at løsningen ser ut som dette:\\
-        $T(k)=k\lg{k}+k$, for $k<n$
+    \begin{itemize}
+        \item Fin måte å visualisere arbeidet
+        \item Kan være overveldene i starten
+        \item<2-> Vi itererer gjennom hva algoritmen koster for hvert nivå i treet, og legger det sammen, altså får vi en sum ($\text{kostnad løvnivå} + \sum_{i=0}^{h-1}\text{pris for nivå $i$}$)
+        \item<3-> Kjøretiden blir høyden til treet er hvor lang tid det tar å komme seg til grunntilfellet. Kjøretiden blir summen av kostnaden til hvert nivå
+        \item<4-> Kan ofte bruke masterteoremet i stedet (men det bevises via rekurrensetrær)
+        \item<5-> Eksempel: $T(n)=3T(n/4)+cn^2 = 3T(n/4) +\Theta(n^2)$. (s. 88 i boka)
+    \end{itemize}
     \end{block}
 \end{frame} 

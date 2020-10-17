@@ -1,0 +1,14 @@
+\begin{frame}{Masterteoremet}
+    \begin{block}{Master theorem}
+    Let $a \geq 1$ and $b < 1$ be constants, let $f(n)$ be a function, and let $T(n)$ be defined on nonegative integers by the recurrence
+    \[
+    T(n) = aT(n/b)+f(n).
+    \]
+    where we interpret $n/b$ to mean either $\lfloor n/b\rfloor$ or $\lceil n/b \rceil$. Then $T(n)$ has the following asymptotic bounds:
+    \begin{enumerate}
+        \item If $f(n)=O(n^{\log_b{a-\epsilon}})$ for some constant $\epsilon > 0$, then $T(n)=\Theta(n^{\log_b{a}})$.
+        \item If $f(n) = \Theta(n^{\log_b{a}})$, then $T(n) = \Theta(n^{\log_b{a}}\lg{n})$.
+        \item If $f(n) = \Omega(n^{\log_b{a+\epsilon}})$ for some constant $\epsilon > 0$, and if $af(n/b) \leq cf(n)$ for some constant $c < 1$ and all sufficiently large $n$, then $T(n) = \Theta(f(n))$.
+    \end{enumerate}
+    \end{block}
+\end{frame} 

@@ -1,0 +1,28 @@
+\begin{frame}{Å se kjøretid fra kode}
+    \begin{block}{Må øves på}
+    Gitt at vi har en funksjon FunctionN, som har kjøretid $\Theta(n)$, hva blir kjøretiden til disse?
+    \begin{columns}
+\begin{column}{0.5\textwidth}
+        \begin{pseudo}*
+    \hd{MystiskA}(n) \\
+    if $n > 1$ \\+
+        \pr{FunctionN}(n) \\
+        $a = \pr{Mystisk}(n/2)$ \\
+        $b = \pr{Mystisk}(n/2)$ \\
+        $c = \pr{Mystisk}(n/2)$ \\
+        return $a+b+c$
+\end{pseudo}
+Vi får rekurrens $T(n) = 3T(n/2) + \Theta(n)$, siden vi kaller funksjonen tre ganger.
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+    \begin{pseudo}*
+    \hd{MystiskB}(n) \\
+    if $n > 1$ \\+
+        \pr{FunctionN}(n) \\
+        return $3 \cdot \pr{Mystisk}(n/2)$
+\end{pseudo}
+Vi får rekurrense $T(n) = T(n/2) + \Theta(n)$, vi kaller bare funksjonen en gang!
+\end{column}
+\end{columns}
+    \end{block}
+\end{frame}

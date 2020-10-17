@@ -1,0 +1,33 @@
+\begin{frame}{Bucket sort}
+    \begin{block}{}
+    \begin{columns}
+\begin{column}{0.5\textwidth}
+Uniformt fordel tallene i bøtter, sorter så i hver bøtte og kombiner. NB: krever uniform sannsynlighetsfordeling! \\
+*: avhenger av sub-rutine
+\begin{table}[b]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Sammenligning & Nei*\\
+        \hline
+        Best-case & $\Theta(n)$\\
+        \hline
+        Average-case & $\Theta(n)$\\
+        \hline
+        Worst-case & $\Theta(n^2)$\\
+        \hline
+        Minne & $O(n)$\\
+        \hline
+        In-place & Nei\\
+        \hline
+        Stabil & Ja*\\
+        \hline
+    \end{tabular}
+    \end{table}
+\end{column}
+\begin{column}{0.5\textwidth}
+\animategraphics[loop,controls,width=\textwidth]{16}{images/gifs/insertion-sort/insertion-sort-}{0}{210}
+\end{column}
+\end{columns}
+    \end{block}
+\end{frame} 

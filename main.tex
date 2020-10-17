@@ -1,5 +1,6 @@
 \documentclass[aspectratio=169]{beamer}
-\usepackage[english]{babel}
+\usepackage[norsk]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 \usepackage{transparent}
 \usepackage[default,scale=1]{opensans}
@@ -7,9 +8,16 @@
 \usepackage{svg}
 \usepackage{pgfplots}
 \usepackage{tikz}
+\usepackage{animate}
 \usepackage[kw]{pseudo}
-
-\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{csquotes}
+% nu
+\newtheorem{innercustomthm}{Theorem}
+\newenvironment{numberedThm}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
 
 \pgfplotsset{Big O/.style={%
                 axis lines = left,
@@ -38,8 +46,8 @@ width=\textwidth,height=21em,compat=1.9}
 		\includesvg[width=0.1\textwidth]{Online_bla.svg}
 		\hskip2em
 		\includegraphics[width=0.1\textwidth]{abakus_logo_black.eps}
-		\hskip2em
-		\href{https://s.ntnu.no/uoffisiell-algdat-2020}{s.ntnu.no/uoffisiell-algdat-2020}
+		%\hskip2em
+		%\href{https://s.ntnu.no/uoffisiell-algdat-2020}{s.ntnu.no/uoffisiell-algdat-2020}
 		\hfill% 
 		\usebeamercolor[fg]{page number in head/foot}% 
 		\usebeamerfont{page number in head/foot}% 
@@ -79,16 +87,16 @@ width=\textwidth,height=21em,compat=1.9}
 	\AtEndDocument{\begin{frame}[plain, noframenumbering]
 		\begin{center}
 			\vspace{4em}
-			{\huge Thank you for your attention}\\
+			{\huge Lykke til, dette klarer du!}\\
 			\vspace{5em}
-			\includesvg[width=0.7\textwidth]{Online_bla.svg}
+			\includesvg[width=0.3\textwidth]{Online_bla.svg}\hskip2em\includegraphics[width=0.3\textwidth]{abakus_logo_black.eps}
 		\end{center}
 	\end{frame}
 	}
 
 % ---------->	Write here the content of the front page <----------
 	\title[Algdat 2020 Midtsemester]{Uoffisiell Midtsemesterforelesning}
-	\subtitle{Algoritmer og Datastrukturer - TDT4120\\
+	\subtitle{Algoritmer og datastrukturer - TDT4120\\
 	Høst 2020}
 	%\institute{\includesvg[width=0.7\textwidth]{Online_hvit.svg}}
 	%Remember to uncomment the 3 lines in the next section in order to dsplay the author
@@ -149,17 +157,39 @@ width=\textwidth,height=21em,compat=1.9}
 \input{slides/asymptotic-notation/04-graph-intersection}
 \input{slides/asymptotic-notation/06-new-way-of-seeing}	
 \input{slides/asymptotic-notation/07-exercise}
+\input{slides/asymptotic-notation/08-exercise-2}
 \section{Rekurrenser}
 \input{slides/recurrences/01-motivation}
 \input{slides/recurrences/02-methods}
 \input{slides/recurrences/03-iteration}
 \input{slides/recurrences/04-substitution}
 \input{slides/recurrences/05-recursion-tree}
+\input{slides/recurrences/06-rec-tree-example}
+\input{slides/recurrences/07-rec-tree-example}
+\input{slides/recurrences/08-master-theorem}
+\input{slides/recurrences/09-master-theorem}
+\input{slides/recurrences/10-change-of-variables}
+\input{slides/recurrences/11-exercise}
+\input{slides/recurrences/12-reading-code}
+\input{slides/pause}
+\section{Analyse}
+\input{slides/algorithmic-analysis/00-amortized-analysis}
+\input{slides/algorithmic-analysis/01-vector-resize}
+\section{Sortering}
+\input{slides/sorting/00-properties}
+\input{slides/sorting/01-digression}
+\input{slides/sorting/02-note}
+\input{slides/sorting/03-insertion}
+\input{slides/sorting/04-merge}
+\input{slides/sorting/05-1-quick}
+\input{slides/sorting/05-2-quick}
+\input{slides/sorting/06-heap}
+\input{slides/sorting/07-counting}
+\input{slides/sorting/08-radix}
+\input{slides/sorting/09-bucket}
+\input{slides/sorting/10-comparison-sort-limit}
+\input{slides/sorting/11-exercise-1}
+\input{slides/sorting/12-exercise-2}
+\input{slides/sorting/13-exercise-3}
 
-{
-\setbeamertemplate{navigation symbols}{}
-\begin{frame}[plain]
-    \makebox[\linewidth]{\includegraphics[width=\paperwidth]{bg.png}}
-\end{frame}
-}
 \end{document}

@@ -1,0 +1,32 @@
+\begin{frame}{Counting sort}
+    \begin{block}{}
+    \begin{columns}
+\begin{column}{0.5\textwidth}
+Anta at du kun kan ha $k$ distinkte elementer. Tell hvor mange instanser det er av hvert element, gjør tellingen om til indekser. Flytt elementer til en ny liste basert på indeksen du fant.
+\begin{table}[b]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Sammenligning & Nei\\
+        \hline
+        Best-case & $\Theta(n+k)$\\
+        \hline
+        Average-case & $\Theta(n+k)$\\
+        \hline
+        Worst-case & $\Theta(n+k)$\\
+        \hline
+        Minne & $O(n+k)$\\
+        \hline
+        In-place & Nei\\
+        \hline
+        Stabil & Ja\\
+        \hline
+    \end{tabular}
+\end{table}
+\end{column}
+\begin{column}{0.5\textwidth}
+\animategraphics[loop,controls,width=\textwidth]{16}{images/gifs/insertion-sort/insertion-sort-}{0}{210}
+\end{column}
+\end{columns}
+    \end{block}
+\end{frame}

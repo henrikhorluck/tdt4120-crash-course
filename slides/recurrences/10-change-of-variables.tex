@@ -1,0 +1,13 @@
+\begin{frame}{Variabelskifte}
+    \begin{block}{Bytt ut vanskelige uttrykk}
+        \begin{itemize}
+            \item Fremgangsmåte:
+            \begin{enumerate}
+                \item Sett opp ny rekurrens av en annen variabel, f.eks. $T(n) = T(2^k) = S(k)$
+                \item Løs den, f.eks. med masterteoremet
+                \item Bytt tilbake\footnote{Kan også benyttes dersom vi ikke har $T(n)$ på venstre side, da slipper vi å bytte tilbake} til $T(n)$, i vårt tilfelle blir det å sette $k=\log_2{n}$ siden $2^{\log_2{n}}=n$. Husk logaritme-base spiller sjelden en rolle
+            \end{enumerate}
+            \item Øving 3 har mye bra her
+        \end{itemize}
+    \end{block}
+\end{frame}

@@ -1,0 +1,13 @@
+\begin{frame}{Rekursjonstrær}
+    \begin{block}{Vi regner på det}
+    \begin{itemize}
+        \item For detaljer se boka
+        \item For å telle noder på bunnen, benytter oss av $a^{\log{b}} = b^{\log{a}}$ (samme som vi benytter oss av i Masterteoremet)
+        \item<2-> Antall noder ved høyde $h$ er $3^h$
+        \item<3-> Teller antall noder på løvnivå: $3^{\log_4{n}} =n^{\log_4{3}}$, ved å anta konstant grunntilfelle får vi at kjøretiden blir $\Theta(n^{\log_4{3}})$
+        \item<4-> Vi får følgende uttrykk: $T(n) =\sum_{i=0}^{\log_4{n}-1}\left(\frac{3}{16}\right)^i cn^2 + \Theta(n^{\log_4{3}} )$
+        \item<5-> Regn ut selv!
+        \item<6-> Hint: kan sammenligne med uendelig geometrisk rekke, hvordan påvirker det hvilken stor-O vi kan bruke?
+    \end{itemize}
+    \end{block}
+\end{frame} 
